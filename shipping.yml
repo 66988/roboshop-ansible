@@ -1,0 +1,15 @@
+#component=shipping
+#schema_type=mysql
+#source common.sh
+#
+#func_java
+#
+
+- name : Shipping Setup
+  hosts: all
+  become: yes
+  vars:
+    component: shipping
+  tasks:
+    - name : Schema Setup
+
