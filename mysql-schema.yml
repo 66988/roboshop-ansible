@@ -5,4 +5,4 @@
     state: Installed
 
 - name: Load Schema
-  ansible.builtin.shell: mysql.roshinis.online -uroot -pRoboShop@1 < /app/schema/{{component}}.sql
+  ansible.builtin.shell: mysql-dev.roshinis.online -uroot -pRoboShop@1 < /app/schema/{{component}}.sql

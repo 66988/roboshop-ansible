@@ -9,4 +9,4 @@
     state: Installed
 
 - name: Load User Schema
-  ansible.builtin.shell: mongo --host mongodb.roshinis.online </app/schema/{{component}}.js
+  ansible.builtin.shell: mongo --host mongodb-dev.roshinis.online </app/schema/{{component}}.js
