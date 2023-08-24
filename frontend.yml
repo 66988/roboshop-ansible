@@ -5,12 +5,12 @@
     - name: Install nginx
       ansible.builtin.yum:
         name: nginx
-        state: Installed
+        state: installed
 
     - name : Copy RoboShop Configuration
       ansible.builtin.copy:
         src: nginx-roboshop.conf
-        dest: nginx-roboshop.conf
+        dest: /etc/nginx/default.d/roboshop.conf
 
     - name : Clean old content
       ansible.builtin.file:
@@ -30,6 +30,6 @@
 
     - name: Start Nginx
       ansible.builtin.systemd:
-        name: Nginx
-        state: Restarted
+        name: nginx
+        state: restarted
         enabled: yes
